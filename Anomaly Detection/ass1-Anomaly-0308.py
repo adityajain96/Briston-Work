@@ -101,7 +101,7 @@ for datapoint in data:
 
 
 for bristonid in bid_list[6:]:  #suntower 500 kva - 1
-    sql_voltages = "SELECT voltage,unixdatetime FROM gurtam_"+str(bristonid)+" WHERE unixdatetime between 1470215460 and 1470225000"
+    sql_voltages = "SELECT voltage,unixdatetime FROM gurtam_"+str(bristonid)+" WHERE unixdatetime between 1470937824 and 1470939024"
     #print sql_voltages 
     cursor.execute(sql_voltages)
     front=cursor.fetchall()
@@ -125,7 +125,7 @@ for bristonid in bid_list[6:]:  #suntower 500 kva - 1
     plt.ylabel('FuelLevel (in litres)')
     plt.title(bristonid)
     plt.plot(adc_list2, fuel_litre)
-    plt.axis([1470215460, 1470225000, 0, 1500])
+    plt.axis([1470937824, 1470939024, 0, 1500])
     plt.show()  
     break
     #print fuellevel_list(bristonid,adc_list1)
